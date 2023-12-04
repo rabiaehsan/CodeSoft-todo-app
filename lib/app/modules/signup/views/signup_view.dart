@@ -39,6 +39,7 @@ class SignupView extends GetView<SignupController> {
               ),
               ReUseTextField(
 
+
                   hintText: 'Email',
                   icon: Icons.email,
                   controller: controller.emailController),
@@ -52,6 +53,9 @@ class SignupView extends GetView<SignupController> {
               const SizedBox(
                 height: 30,
               ),
+              CustomButton(title: 'Sign Up', function: () {
+                controller.onCreateAccount();
+              }),
               CustomButton(title: 'Sign Up', function: () {
                 controller.onCreateAccount();
               }),
