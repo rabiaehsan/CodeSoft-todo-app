@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-
 import '../../../utils/add_task_alert_dialoagstate.dart';
 import '../../routes/app_pages.dart';
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,7 +59,6 @@ class TaskList extends StatelessWidget {
             child: Text('Error: ${snapshot.error}'),
           );
         }
-
         if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
           return const Center(
             child: Text('No tasks available.'),
